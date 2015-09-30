@@ -24,7 +24,7 @@ public class Constants {
      */
 
     public static String content_typeValue = "application/json";
-    public static String apiKeyValue = "1fc602693bfd56a7232d53df7bdab5f9824467de687a969998dd4dbeabdae831";
+    public static String apiKeyValue = "b785539d40a0b5c70942926af271837aef45a6ce818f159534a18eb72214e3ec";
     public static String apiVersionValue = "2";
 
     /**
