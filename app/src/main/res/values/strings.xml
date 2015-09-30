@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">recrutamento-android</string>
+
+    <string name="season">Season 5</string>
+    <string name="get_episodes">Retrieving episodes&#8230;</string>
+    <string name="get_rating">Retrieving rating&#8230;</string>
+    <string name="header_episodes">Episodes</string>
+    <string name="error_getting_data">There was an error while getting data from the server, please try again</string>
+
+    <!-- Network -->
+    <string name="internet_title">No network connection</string>
+    <string name="internet_message">In order to retrieve seasson info, you need to have an active network connection</string>
+    <string name="internet_settings_button">Activate Wifi</string>
+    <string name="internet_cancel_button">Cancel</string>
+    <string name="internet_turning_wifiOn">Turning Wi-Fi on&#8230;</string>
+</resources>
