@@ -9,6 +9,7 @@
     <dimen name="flexible_space_height">72dp</dimen>
     <dimen name="flexible_space_image_height">185dp</dimen>
     <dimen name="flexible_space_header_height">350dp</dimen>
+    <dimen name="tablet_header_height">550dp</dimen>
     <dimen name="flexible_space_show_fab_offset">120dp</dimen>
 
     <dimen name="parallax_image_height">280dp</dimen>
@@ -21,4 +22,6 @@
     <dimen name="sliding_overlay_blur_size">4dp</dimen>
     <dimen name="spacing_medium">8dp</dimen>
     <dimen name="card_radius">3dp</dimen>
+
+    <dimen name="inner_margin">60dp</dimen>
 </resources>

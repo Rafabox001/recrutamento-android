@@ -19,6 +19,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.AbsListView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -61,6 +65,9 @@ public class MainActivityFragment extends Fragment implements ObservableScrollVi
     int mParallaxImageHeight;
     Context mContext;
 
+    private AnimationSet set;
+    private LayoutAnimationController controller;
+
     public List<Episode> episodesList = new ArrayList<>();
 
     public MainActivityFragment() {
@@ -72,6 +79,13 @@ public class MainActivityFragment extends Fragment implements ObservableScrollVi
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         ButterKnife.bind(this, rootView);
 
+        set = new AnimationSet(true);
+        Animation animation = AnimationUtils.loadAnimation(getActivity().getApplicationContext(), R.anim.animation_list);
+        animation.setDuration(1200);
+        set.addAnimation(animation);
+
+        controller = new LayoutAnimationController(set, 0.5f);
+
         mContext = getActivity();
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(R.string.season);
@@ -79,6 +93,7 @@ public class MainActivityFragment extends Fragment implements ObservableScrollVi
 
         mParallaxImageHeight = getResources().getDimensionPixelSize(R.dimen.parallax_image_height);
         mListView.setScrollViewCallbacks(this);
+        mListView.setLayoutAnimation(controller);
         View paddingView = new View(getActivity());
         AbsListView.LayoutParams lp = new AbsListView.LayoutParams(AbsListView.LayoutParams.MATCH_PARENT, mParallaxImageHeight);
         paddingView.setLayoutParams(lp);

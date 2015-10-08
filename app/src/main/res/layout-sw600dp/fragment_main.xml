@@ -34,7 +34,7 @@
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:layout_marginStart="@dimen/activity_vertical_margin"
             android:layout_marginTop="90dp"
-            android:textColor="@color/text_gray" />
+            android:textColor="@color/primary" />
 
         <TextView
             android:layout_width="50dp"
@@ -60,7 +60,12 @@
     <com.github.ksoichiro.android.observablescrollview.ObservableListView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="@dimen/inner_margin"
+        android:layout_marginEnd="@dimen/inner_margin"
+        android:layout_marginLeft="@dimen/inner_margin"
+        android:layout_marginStart="@dimen/inner_margin"/>
 
     <include layout="@layout/header" />
 
